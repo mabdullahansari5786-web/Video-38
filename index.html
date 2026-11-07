@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Flexbox</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            height: auto;
+            display: flex;
+            margin: 5px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* flex-direction: column-reverse; */
+        }
+
+        /* Container Properties:
+        Gap, row-gap,  colum-gap, display:flex, flex-wrap, flex-flow, justify-content, align items, align content, flex direction, 
+        In flex box no justify items exist. */
+
+        .containers {
+            border: 2px solid red;
+            height: auto;
+            display: flex;
+            /* margin: 5px; */
+            gap: 30px;
+            row-gap: 50px;
+            column-gap: 10px;
+            /* gap: 60px 50px; */
+
+            flex-wrap: wrap;
+            /* flex-flow: row wrap-reverse; */
+            /* justify-content: center; */
+            align-items: center;
+            align-content: center;
+            /* flex-direction: row-reverse; */
+            /* flex-direction: row; */
+
+            /* There is no justify-items in flex-box */
+        }
+
+        .container1{
+             border: 2px solid red;
+            height: 80vh;
+            display: flex;
+            margin: 5px;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        /* Items Properties: 
+        order:
+        Order Property mein jis ki order sab se zayada ho gi wo akhir mein aye gi. */
+
+        .item {
+            height: 92px;
+            width: 92px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            margin: 4px;
+        }
+
+        .items {
+            height: 92px;
+            width: 92px;
+            border: 2px solid grey;
+            background-color: aqua;
+            margin: 4px;
+        }
+
+        .items1{
+            flex-grow: 1;
+            height: 92px;
+            width: 92px;
+            border: 2px solid grey;
+            background-color:darksalmon;
+            margin: 4px;
+        }
+        
+        .item1{
+            flex-grow: 3;
+            /* flex grow ka matlab hai ye jis ke uper bhi lagaye jaye gi property wo jitni value hum ne di ho gi wo baki sab ke mukable mein bari ho jaye gi agar sab ke uper laga dein to ye sab aik hi row mein sab aik jaisi height width le kar set ho jayein ge.  */
+
+            /* flex-shrink: 2; */
+
+            /* flex shrink hum kisi property par lagate hain q ke jub wo kisi choti screen par nazar aye gi jitni use value di ho gi wo utni speed se choti nazar aye gi jitni screen utni speed se wo utni choti ho jaye gi.*/
+
+            align-self: flex-end;
+
+            /* kisi perticular element ki configuration ko override configuration karni ho to align self property use hoti hai. yani hum ye jis bhi perticular element ya kisi bhi aik item par lagayein ge aur use jahan bhi jane ko kahein ge wo whan chli jaye gi.  ye is liye use karte hai take wo khud ko align kar le. self align kare.*/
+
+        }
+        
+        .item2{
+            align-self:flex-start;
+        }
+
+        .order-1 {
+            order: 1;
+        }
+
+        .order-2 {
+            order: 100;
+        }
+
+        .order-3 {
+            order: 50;
+        }
+
+        .order-4 {
+            order: 5;
+        }
+
+        .order-5 {
+            order: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="containers">
+
+            <div class="items order-3">1</div>
+            <div class="items order-1">2</div>
+            <div class="items order-4">3</div>
+            <div class="items order-5">4</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+
+        <div class="container1">
+            <div class="items1 item1">1</div>
+            <div class="items1">2</div>
+            <div class="items1">3</div>
+            <div class="items1">4</div>
+            <div class="items1 item2"></div>
+            <div class="items1"></div>
+            <div class="items1"></div>
+            <div class="items1"></div>
+            <div class="items1"></div>
+            <div class="items1"></div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
